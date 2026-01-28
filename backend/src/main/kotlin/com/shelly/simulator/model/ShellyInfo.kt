@@ -7,12 +7,12 @@ import com.fasterxml.jackson.annotation.JsonProperty
  * Used for device discovery and identification.
  */
 data class ShellyInfo(
-    /** Device model/type identifier (e.g., "SHRGBW2" for RGBW controller) */
-    val type: String = "SHRGBW2",
+    /** Device model/type identifier - SHBLB-1 is the Shelly Bulb RGBW */
+    val type: String = "SHBLB-1",
     /** Device MAC address */
     val mac: String = "B0F1EC000001",
-    /** Firmware version string */
-    val fw: String = "1.0.0-simulator",
+    /** Firmware version string in Shelly format: YYYYMMDD-HHMMSS/version@commit */
+    val fw: String = "20250128-100000/v1.0.0@simulator",
     /** Firmware build ID in YYYYMMDD-HHMMSS format */
     @JsonProperty("fw_id")
     val fwId: String = "20250128-100000",
